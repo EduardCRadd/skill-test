@@ -1,8 +1,8 @@
 :root {
   font-size: 16px;
   --color-bg--primary: #000000;
-  --color-bg--secondary: #FFFFFF;
-  --color-text--primary: #FFFFFF;
+  --color-bg--secondary: #ffffff;
+  --color-text--primary: #ffffff;
   --color-text--secondary: #000000;
   --color-nav: #252525;
 }
@@ -294,7 +294,7 @@ img {
   .sectionFirst__paragraph {
     padding: 30vw 10px 54vw 10px;
     width: 100%;
-    font-size: 17px;
+    font-size: 4.54vw;
   }
 }
 
@@ -544,6 +544,7 @@ img {
   .sectionThird__header--third {
     width: 100%;
     font-size: 5.33vw;
+    margin-bottom: 170px;
   }
 }
 .sectionThird__container {
@@ -668,7 +669,7 @@ img {
 @media only screen and (max-width: 768px) {
   .sectionThird__paragraph--second {
     max-width: 100%;
-    font-size: 4.57vw;
+    font-size: 4.54vw;
     margin-bottom: 26.66vw;
     margin-top: 50.667vw;
   }

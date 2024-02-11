@@ -10,7 +10,6 @@ $break-large: 1280 !default; // from desktop size
 $break-larger: 1440 !default; // from bigger desktop size
 $break-huge: 1920 !default; // from biggest desktop size
 
-
 $break-points-map: (
   xxs: $break-xxs,
   xs: $break-xs,
@@ -20,8 +19,6 @@ $break-points-map: (
   larger: $break-larger,
   huge: $break-huge,
 );
-
-
 
 @function getBreakpoint($key) {
   @return map-get($break-points-map, $key);
@@ -100,7 +97,7 @@ $break-points-map: (
   }
 }
 
- //(max-width: 1024px)
+//(max-width: 1024px)
 @mixin desktop-down {
   @media #{$desktop-down} {
     @content;
