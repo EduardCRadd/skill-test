@@ -1,0 +1,162 @@
+@import './media-queries.scss';
+
+.sectionFirst {
+  position: relative;
+  width: 100%;
+  padding: 0 150px;
+  background-color: var(--color-bg--primary);
+
+  @include breakpoint(large, max) {
+    padding: 0;
+  }
+  @include breakpoint(small, max) {
+    padding: 0;
+  }
+
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    top: 70px;
+
+    @include breakpoint(large, max) {
+      text-align: center;
+      top: 100px;
+    }
+    @include breakpoint(small, max) {
+      top: 32vw;
+    }
+  }
+  &__header {
+    position: relative;
+    font-size: 2.6vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    //left: 2.344vw;
+    top: 1.145vw;
+
+    @include breakpoint(large, max) {
+      font-size: 4.5vw;
+
+    }
+    @include breakpoint(small, max) {
+      font-size: 6.5vw;
+    }
+  }
+
+  &__outline {
+    position: relative;
+    color: transparent;
+    font-size: 27vw;
+    font-weight: 500;
+    -webkit-text-stroke: 2px #fff;
+    text-stroke: 2px #fff;
+    letter-spacing: -0.09em;
+    line-height: .9em;
+    left: -2.344vw;
+
+    @include breakpoint(large, max) {
+      text-align: center;
+      transform: translateX(-1.7vw);
+      left: 0;
+    }
+    @include breakpoint(small, max) {
+      font-size: 43.5vw;
+      letter-spacing: -0.13em;
+      line-height: .95em;
+      transform: translateX(-2.9vw);
+    }
+  }
+
+  &__subheading {
+    position: relative;
+    //left: 2.344vw;
+    font-size: 1.3vw;
+    font-weight: 400;
+
+    @include breakpoint(large, max) {
+      //left: 0;
+      line-height: 1.25em;
+      font-size: 2.7vw;
+      padding-top: 15px;
+    }
+    @include breakpoint(small, max) {
+      font-size: 4.8vw;
+      line-height: 1.15em;
+      padding-top: 8px;
+    }
+  }
+
+  &__container-img {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 140px auto 0;
+
+
+    @include breakpoint(large, max) {
+      display: block;
+      padding: 0;
+    }
+    @include breakpoint(small, max) {
+      padding: 0;
+    }
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+
+    @include breakpoint(large, max) {
+      padding: 0;
+    }
+    @include breakpoint(small, max) {
+      padding: 0;
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    width: 1px;
+    height: 9.27vw;
+    top: 41vw;
+    right: 2.344vw;
+    background-color: var(--color-text--primary);
+
+    @include breakpoint(large, max) {
+      display: none;
+    }
+    @include breakpoint(small, max) {
+     display: none;
+    }
+  }
+
+  &__paragraph {
+    position: relative;
+    width: 550px;
+    font-size: 18px;
+    text-wrap: none;
+    margin: 0 auto;
+    padding: 39.3vw 0 22.1vw 0;
+
+    @include breakpoint(large, max) {
+      padding: 20vw 0 40vw 0;
+    }
+    @include breakpoint(small, max) {
+      padding: 30vw 10px 54vw 10px;
+      width: 100%;
+      font-size: 17px;
+    }
+  }
+
+
+
+
+}

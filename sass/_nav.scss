@@ -1,0 +1,63 @@
+@import './media-queries.scss';
+
+.nav {
+  &__container {
+    position: relative;
+    background-color: var(--color-nav);
+    top: 55px;
+    left: -85px;
+    width: 240px;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    color: inherit;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 10px;
+
+    &:hover {
+      //cursor: alias;
+    }
+
+    &--second {
+      top: 21vw;
+
+      @include breakpoint(large, max) {
+        top: 10vw;
+      }
+      @include breakpoint(small, max) {
+        top: 10vw;
+      }
+    }
+
+    @include breakpoint(large, max) {
+      margin: 0 auto;
+      left: 0;
+    }
+    @include breakpoint(xxs, max) {
+      margin: 0 auto;
+      top: 30px;
+    }
+
+  }
+
+  &__diamond {
+    order: 1;
+    padding-right: 10px;
+    padding-left: 7px;
+  }
+  &__text {
+    order: 1;
+  }
+  &__burger {
+    order: 2;
+    margin-left: auto;
+    margin-right: 13px;
+  }
+}

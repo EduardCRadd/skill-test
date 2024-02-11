@@ -1,0 +1,134 @@
+// ----------------------------------------------------------------------
+// BREAKPOINTS
+// ----------------------------------------------------------------------
+
+$break-xxs: 365 !default; // from "phone portrait" size
+$break-xs: 568 !default; // from "phone landscape" size
+$break-small: 768 !default; // from "tablet portrait" size
+$break-medium: 1024 !default; // from small "desktop" size
+$break-large: 1280 !default; // from desktop size
+$break-larger: 1440 !default; // from bigger desktop size
+$break-huge: 1920 !default; // from biggest desktop size
+
+
+$break-points-map: (
+  xxs: $break-xxs,
+  xs: $break-xs,
+  small: $break-small,
+  medium: $break-medium,
+  large: $break-large,
+  larger: $break-larger,
+  huge: $break-huge,
+);
+
+
+
+@function getBreakpoint($key) {
+  @return map-get($break-points-map, $key);
+}
+
+@mixin breakpoint($width, $min-or-max: min) {
+  @if type-of($width) == number {
+    @media only screen and (#{$min-or-max}-width: $width*1px) {
+      @content;
+    }
+  } @else {
+    $break: getBreakpoint($width);
+
+    @media only screen and (#{$min-or-max}-width: $break*1px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-between($min, $max) {
+  $minWidth: $min;
+  $maxWidth: $max;
+
+  @if type-of($min) != number {
+    $minWidth: getBreakpoint($min);
+  }
+
+  @if type-of($max) != number {
+    $maxWidth: getBreakpoint($max);
+  }
+
+  @media only screen and (min-width: $minWidth*1px) and (max-width: ($maxWidth*1px) - 1) {
+    @content;
+  }
+}
+
+// (max-width: 567px)
+//@mixin mobile-only {
+//  @media #{$mobile-only} {
+//    @content;
+//  }
+//}
+
+// (min-width: 568px)
+@mixin tablet-portrait-up {
+  @include breakpoint(568) {
+    @content;
+  }
+}
+
+// (max-width: 568px)
+//@mixin tablet-portrait-down {
+//  @media #{$tablet-portrait-down} {
+//    @content;
+//  }
+//}
+
+// (min-width: 768px)
+@mixin tablet-landscape-up {
+  @include breakpoint(768) {
+    @content;
+  }
+}
+
+// (max-width: 768px)
+//@mixin tablet-landscape-down {
+//  @media #{$tablet-landscape-down} {
+//    @content;
+//  }
+//}
+
+// (min-width: 1024px)
+@mixin desktop-up {
+  @include breakpoint(1024) {
+    @content;
+  }
+}
+
+ //(max-width: 1024px)
+@mixin desktop-down {
+  @media #{$desktop-down} {
+    @content;
+  }
+}
+
+// (min-width: 1280px)
+@mixin big-desktop-up {
+  @include breakpoint(1280) {
+    @content;
+  }
+}
+
+@mixin bigger-desktop-up {
+  @include breakpoint(1440) {
+    @content;
+  }
+}
+
+@mixin huge-desktop-up {
+  @include breakpoint(1920) {
+    @content;
+  }
+}
+
+// (max-width: 1280px)
+@mixin big-desktop-down {
+  @media #{$big-desktop-up} {
+    @content;
+  }
+}

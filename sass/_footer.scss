@@ -1,0 +1,65 @@
+@import './media-queries.scss';
+
+.footer {
+  color: var(--color-text--secondary);
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 9.375vw;
+  text-align: center;
+  font-weight: 700;
+
+  @include breakpoint(small, max) {
+    margin-top: 26.66vw;
+  }
+
+
+  &__logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+
+    @include breakpoint(small, max) {
+      margin-bottom: 35px;
+      max-width: 62%;
+    }
+  }
+  &__cta {
+    font-size: 1.82vw;
+
+    @include breakpoint(large, max) {
+      font-size: 2.9vw;
+    }
+    @include breakpoint(small, max) {
+      width: 80%;
+      font-size: 5.33vw;
+      line-height: 1.2em;
+    }
+  }
+  &__link {
+    margin-bottom: 7.3vw;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: .1em;
+    text-decoration-thickness: 2px;
+    font-size: 1.82vw;
+    margin-top: -5px;
+
+    @include breakpoint(large, max) {
+      font-size: 2.9vw;
+    }
+    @include breakpoint(small, max) {
+      font-size: 5.33vw;
+      margin-top: 0;
+      margin-bottom: 75px;
+    }
+  }
+
+  ::selection {
+    background: var(--color-bg--primary);
+    color: var(--color-text--primary);
+  }
+}
