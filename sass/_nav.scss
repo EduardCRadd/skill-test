@@ -1,4 +1,4 @@
-@import './media-queries.scss';
+@import './media-queries';
 
 .nav {
   &__container {
@@ -10,10 +10,8 @@
     height: 46px;
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
+    place-content: center space-between;
     align-items: center;
-
     color: inherit;
     font-size: 16px;
     text-transform: uppercase;
@@ -31,6 +29,7 @@
       @include breakpoint(large, max) {
         top: 10vw;
       }
+
       @include breakpoint(small, max) {
         top: 10vw;
       }
@@ -40,6 +39,7 @@
       margin: 0 auto;
       left: 0;
     }
+
     @include breakpoint(xxs, max) {
       margin: 0 auto;
       top: 30px;
@@ -51,9 +51,11 @@
     padding-right: 10px;
     padding-left: 7px;
   }
+
   &__text {
     order: 1;
   }
+
   &__burger {
     order: 2;
     margin-left: auto;

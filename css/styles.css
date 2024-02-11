@@ -1,9 +1,9 @@
 :root {
   font-size: 16px;
-  --color-bg--primary: #000000;
-  --color-bg--secondary: #ffffff;
-  --color-text--primary: #ffffff;
-  --color-text--secondary: #000000;
+  --color-bg--primary: #000;
+  --color-bg--secondary: #fff;
+  --color-text--primary: #fff;
+  --color-text--secondary: #000;
   --color-nav: #252525;
 }
 
@@ -32,7 +32,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   color: var(--color-text--primary);
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 a,
@@ -77,8 +77,7 @@ img {
   height: 46px;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
+  place-content: center space-between;
   align-items: center;
   color: inherit;
   font-size: 16px;
@@ -146,8 +145,7 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  place-content: center center;
   top: 70px;
 }
 @media only screen and (max-width: 1280px) {
@@ -283,16 +281,16 @@ img {
   font-size: 18px;
   text-wrap: none;
   margin: 0 auto;
-  padding: 39.3vw 0 22.1vw 0;
+  padding: 39.3vw 0 22.1vw;
 }
 @media only screen and (max-width: 1280px) {
   .sectionFirst__paragraph {
-    padding: 20vw 0 40vw 0;
+    padding: 20vw 0 40vw;
   }
 }
 @media only screen and (max-width: 768px) {
   .sectionFirst__paragraph {
-    padding: 30vw 10px 54vw 10px;
+    padding: 30vw 10px 54vw;
     width: 100%;
     font-size: 4.54vw;
   }
@@ -368,12 +366,12 @@ img {
 .sectionSecond__container footer {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
   font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
   .sectionSecond__container footer {
-    margin: 30px 15px 0 15px;
+    margin: 30px 15px 0;
     flex-direction: row;
     display: inline-block;
     font-size: 17px;
@@ -428,14 +426,14 @@ img {
 @media only screen and (max-width: 1280px) {
   .sectionSecond__subheader--first {
     max-width: 50vw;
-    margin: 120px 15px 0 15px;
+    margin: 120px 15px 0;
     font-size: 2.9vw;
   }
 }
 @media only screen and (max-width: 768px) {
   .sectionSecond__subheader--first {
     max-width: 100%;
-    margin: 70px 15px 0 15px;
+    margin: 70px 15px 0;
     font-size: 5.3vw;
   }
 }
@@ -588,7 +586,7 @@ img {
 .sectionThird__container footer {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
   font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
@@ -625,7 +623,7 @@ img {
 }
 @media only screen and (max-width: 1280px) {
   .sectionThird__img--second {
-    transform: translateX(0vw);
+    transform: translateX(0);
   }
 }
 @media only screen and (max-width: 768px) {
@@ -654,7 +652,7 @@ img {
   .sectionThird__paragraph--first {
     max-width: 100%;
     font-size: 4.79vw;
-    margin: 0 0 48vw 0;
+    margin: 0 0 48vw;
   }
 }
 .sectionThird__paragraph--second {

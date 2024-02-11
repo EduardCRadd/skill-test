@@ -1,12 +1,12 @@
-@import './media-queries.scss';
+@import './media-queries';
 
 :root {
   font-size: 16px;
 
-  --color-bg--primary: #000000;
-  --color-bg--secondary: #ffffff;
-  --color-text--primary: #ffffff;
-  --color-text--secondary: #000000;
+  --color-bg--primary: #000;
+  --color-bg--secondary: #fff;
+  --color-text--primary: #fff;
+  --color-text--secondary: #000;
   --color-nav: #252525;
 }
 
@@ -35,7 +35,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   color: var(--color-text--primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 p {

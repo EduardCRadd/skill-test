@@ -1,4 +1,4 @@
-@import './media-queries.scss';
+@import './media-queries';
 
 .footer {
   color: var(--color-text--secondary);
@@ -26,18 +26,21 @@
       max-width: 62%;
     }
   }
+
   &__cta {
     font-size: 1.82vw;
 
     @include breakpoint(large, max) {
       font-size: 2.9vw;
     }
+
     @include breakpoint(small, max) {
       width: 80%;
       font-size: 5.33vw;
       line-height: 1.2em;
     }
   }
+
   &__link {
     margin-bottom: 7.3vw;
     text-transform: uppercase;
@@ -50,6 +53,7 @@
     @include breakpoint(large, max) {
       font-size: 2.9vw;
     }
+
     @include breakpoint(small, max) {
       font-size: 5.33vw;
       margin-top: 0;

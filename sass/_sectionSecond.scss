@@ -1,4 +1,4 @@
-@import './media-queries.scss';
+@import './media-queries';
 
 .sectionSecond {
   color: var(--color-text--secondary);
@@ -26,6 +26,7 @@
         flex-direction: column;
         margin-top: 235px;
       }
+
       @include breakpoint(small, max) {
         flex-direction: column;
         margin-top: 49.33vw;
@@ -42,6 +43,7 @@
         flex-direction: column-reverse;
         margin-bottom: 0;
       }
+
       @include breakpoint(small, max) {
         margin-top: 49.33vw;
         margin-bottom: 0;
@@ -54,19 +56,21 @@
       @include breakpoint(large, max) {
         margin-left: 0;
       }
+
       @include breakpoint(small, max) {
         margin-top: 40px;
         margin-left: 0;
       }
     }
+
     footer {
       display: flex;
       flex-direction: column;
-      margin: 20px 0 0 0;
+      margin: 20px 0 0;
       font-size: 18px;
 
       @include breakpoint(small, max) {
-        margin: 30px 15px 0 15px;
+        margin: 30px 15px 0;
         flex-direction: row;
         display: inline-block;
         font-size: 17px;
@@ -87,6 +91,7 @@
         margin: 0 8.33vw;
         width: 85vw;
       }
+
       @include breakpoint(small, max) {
         margin: 0;
         width: 93vw;
@@ -102,6 +107,7 @@
         width: 60vw;
         margin-bottom: 140px;
       }
+
       @include breakpoint(small, max) {
         width: 95vw;
       }
@@ -119,12 +125,13 @@
 
       @include breakpoint(large, max) {
         max-width: 50vw;
-        margin: 120px 15px 0 15px;
+        margin: 120px 15px 0;
         font-size: 2.9vw;
       }
+
       @include breakpoint(small, max) {
         max-width: 100%;
-        margin: 70px 15px 0 15px;
+        margin: 70px 15px 0;
         font-size: 5.3vw;
       }
     }
@@ -132,6 +139,7 @@
     &--second {
       max-width: 42vw;
       line-height: 1.5em;
+
       //margin-left: 8.33vw;
 
       @include breakpoint(large, max) {
@@ -139,6 +147,7 @@
         max-width: 50vw;
         margin: 0 auto;
       }
+
       @include breakpoint(small, max) {
         max-width: 100%;
         margin: 0 15px;

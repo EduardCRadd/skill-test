@@ -1,4 +1,4 @@
-@import './media-queries.scss';
+@import './media-queries';
 
 .sectionFirst {
   position: relative;
@@ -9,6 +9,7 @@
   @include breakpoint(large, max) {
     padding: 0;
   }
+
   @include breakpoint(small, max) {
     padding: 0;
   }
@@ -17,29 +18,32 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    place-content: center center;
     top: 70px;
 
     @include breakpoint(large, max) {
       text-align: center;
       top: 100px;
     }
+
     @include breakpoint(small, max) {
       top: 32vw;
     }
   }
+
   &__header {
     position: relative;
     font-size: 2.6vw;
     font-weight: 600;
     text-transform: uppercase;
+
     //left: 2.344vw;
     top: 1.145vw;
 
     @include breakpoint(large, max) {
       font-size: 4.5vw;
     }
+
     @include breakpoint(small, max) {
       font-size: 6.5vw;
     }
@@ -61,6 +65,7 @@
       transform: translateX(-1.7vw);
       left: 0;
     }
+
     @include breakpoint(small, max) {
       font-size: 43.5vw;
       letter-spacing: -0.13em;
@@ -71,6 +76,7 @@
 
   &__subheading {
     position: relative;
+
     //left: 2.344vw;
     font-size: 1.3vw;
     font-weight: 400;
@@ -81,6 +87,7 @@
       font-size: 2.7vw;
       padding-top: 15px;
     }
+
     @include breakpoint(small, max) {
       font-size: 4.8vw;
       line-height: 1.15em;
@@ -99,10 +106,12 @@
       display: block;
       padding: 0;
     }
+
     @include breakpoint(small, max) {
       padding: 0;
     }
   }
+
   &__img {
     position: relative;
     width: 100%;
@@ -114,6 +123,7 @@
     @include breakpoint(large, max) {
       padding: 0;
     }
+
     @include breakpoint(small, max) {
       padding: 0;
     }
@@ -130,6 +140,7 @@
     @include breakpoint(large, max) {
       display: none;
     }
+
     @include breakpoint(small, max) {
       display: none;
     }
@@ -141,13 +152,14 @@
     font-size: 18px;
     text-wrap: none;
     margin: 0 auto;
-    padding: 39.3vw 0 22.1vw 0;
+    padding: 39.3vw 0 22.1vw;
 
     @include breakpoint(large, max) {
-      padding: 20vw 0 40vw 0;
+      padding: 20vw 0 40vw;
     }
+
     @include breakpoint(small, max) {
-      padding: 30vw 10px 54vw 10px;
+      padding: 30vw 10px 54vw;
       width: 100%;
       font-size: 4.54vw;
     }
